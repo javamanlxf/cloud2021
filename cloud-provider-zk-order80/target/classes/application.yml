@@ -1,0 +1,16 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-consumer-order
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://42.194.220.29:3306/db2021?useUnicode=true&characterEncoding=utf-8&&useSSL=false
+    username: root
+    password: 123456
+  cloud:
+    #注册到zookeeper
+    zookeeper:
+      connect-string: 42.194.220.29:2181
