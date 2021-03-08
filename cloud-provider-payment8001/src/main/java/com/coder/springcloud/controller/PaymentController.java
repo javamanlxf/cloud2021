@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.text.MessageFormat;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @program: cloud2021
@@ -69,5 +70,10 @@ public class PaymentController {
             log.info(info);
         }
         return this.discoveryClient;
+    }
+
+    @GetMapping(value = "/payment/lb")
+    public String getLB() {
+        return "provider-payment-LB:" + UUID.randomUUID().toString();
     }
 }
